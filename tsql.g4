@@ -775,10 +775,10 @@ predicate
     ;
 
 query_expression
-    : (query_specification | '(' query_expression ')') unIon*
+    : (query_specification | '(' query_expression ')') union*
     ;
 
-unIon
+union
     : (UNION ALL? | EXCEPT | INTERSECT) (query_specification | ('(' query_expression ')'))
     ;
 
